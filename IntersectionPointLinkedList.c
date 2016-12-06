@@ -51,20 +51,18 @@ void findIntersection(struct node* head, struct node* head1)
 	int count_1 = 0, count_2 = 0;
 	int diff = 0;
 	int i;
-	int last_1, last_2;
-	while(curr != NULL)
+	while(curr->next != NULL)
 	{
 		++count_1;
-		last_1 = curr->data;
 		curr = curr->next;
 	}
-	while(curr1 != NULL)
+	while(curr1->next != NULL)
 	{
 		++count_2;
-		last_2 = curr1->data;
 		curr1 = curr1->next;
 	}
-	if(last_1 != last_2)
+	/*If last nodes are not same then no need to check further*/
+	if(curr->data != curr1->data)
 	{
 		printf("no intersection point\n");
 		return;
