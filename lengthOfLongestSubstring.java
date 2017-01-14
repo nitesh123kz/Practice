@@ -20,7 +20,6 @@ public class Check
 	    int rightPointer = 0, leftPointer = rightPointer - 1, answer = 0;
 	    while (rightPointer != s.length()) {
 	         Integer previousOccurrence = map.put(s.charAt(rightPointer), rightPointer);
-	         System.out.println("right:" + s.charAt(rightPointer) + "\tpreviousOccurrence:"+previousOccurrence);
 	         if (previousOccurrence != null) {
 	             leftPointer = max(leftPointer, previousOccurrence);
 	         }
